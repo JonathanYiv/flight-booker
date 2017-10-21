@@ -132,4 +132,11 @@ They check their email and see the relevant email.
 
 ## Post-Project Thoughts
 
-Incomplete...
+1. Testing
+
+	I did a little reading on the testing community of Rails. Apparently the two major gems are Minitest and RSpec.
+	Minitest comes shipped with Rails, RSpec doesn't.
+	The Odin Project's curriculum so far has heavily advocated for the usage of RSpec due to its focus on BDD and human-readable code.
+	However, I'm finding myself leaning towards the usage of Minitest.
+	In this [blog post by Brandon Hilkert](http://brandonhilkert.com/blog/7-reasons-why-im-sticking-with-minitest-and-fixtures-in-rails/), he mentions 7 reasons why he is sticking to minitest, and I agree with him.
+	Going forward, I think I will use Minitest/(Fixtures of Factory Girl..still experimenting here) primarily due to the performance metrics I've read about.
