@@ -1,9 +1,7 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  name: MyString
-  abbreviation: MyString
+  name: <%= Faker::Address.country %>
+  abbreviation: <%= Faker::Address.country_code_long %>
 
-two:
-  name: MyString
-  abbreviation: MyString
+two: 
+  name: <%= Faker::Address.country %>
+  abbreviation: <%= Faker::Address.country_code_long %>

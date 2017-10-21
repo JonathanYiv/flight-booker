@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'materialize-sass'
 gem 'jquery-rails'
 
+# Testing
+gem 'faker', '1.8.4'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
