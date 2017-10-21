@@ -4,6 +4,7 @@ class FlightTest < ActiveSupport::TestCase
 
   def setup
     @flight = flights(:one)
+    @joseph = passengers(:joseph)
   end
 
   test "should be valid" do
@@ -38,5 +39,11 @@ class FlightTest < ActiveSupport::TestCase
   test "needs an arrival date" do
     @flight.arrival_date = nil
     assert_not @flight.valid?
+  end
+
+  test "booking adds passenger" do
+    assert_difference '@flight.passengers.count', 1 do
+      Booking.create(passenger: @joseph, flight: @flight)
+    end
   end
 end
