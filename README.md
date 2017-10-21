@@ -28,6 +28,8 @@ I will add authentication with Devise.
 
 I will seed the database with Faker.
 
+I will use some sort of payment system.
+
 ### Pages
 
 1. Search Page
@@ -52,20 +54,36 @@ I will seed the database with Faker.
 
 ```ruby
 Airport
-	Routes:
+	Routes: none
 	Attributes:
+		name - string
+		abbreviation - string
 
 Flight
-	Routes:
+	Routes: none
 	Attributes:
+		departure_airport_id - airport:references
+		arrival_airport_id - airport:references
+
+		flight_number - integer
+		price - float
+
+		arrival_date - datetime
+		departure_date -datetime
 
 Booking
-	Routes:
+	Routes: 
+		:new, :create
 	Attributes
+		passenger_id - passenger:references
+		flight_id - flight:references
 
 Passenger
-	Routes:
+	Routes: none
 	Attributes:
+		name - string
+		email - string
+
 ```
 
 ### Associations
@@ -88,6 +106,28 @@ Booking
 
 Passenger
 	has_many :bookings
+```
+
+### Possible Userflow
+
+```
+User goes to main page, which has a search form.
+They input a number of passengers, a starting airport, an ending airport, a departure date, and an arrival date.
+They press search.
+The page renders a new search results section.
+They see that there are no applicable flights.
+They fill in new flight data in the search form and press search again.
+This time three flights are listed.
+They select the second one by clicking its radio button.
+They press the "Select" button at the bottom of the screen.
+They are taken to a choice screen where they are prompted to either "Continue as User or Guest."
+They select "Continue as Guest."
+They are taken to a Passenger Information page that asks for their information.
+They fill out their information, and then add the next passenger's information.
+They fill out their payment information.
+Then they click "Submit."
+They receive a confirmation page that informs them that they will receive an email with their tickets.
+They check their email and see the relevant email.
 ```
 
 ## Post-Project Thoughts
