@@ -5,3 +5,11 @@ one:
   price: <%= Faker::Number.decimal(2) %>
   arrival_date: <%= Faker::Time.between(3.days.from_now, 7.days.from_now) %>
   departure_date: <%= Faker::Time.between(DateTime.now, 2.days.from_now) %>
+
+two:
+  departure_airport: one
+  arrival_airport: two
+  flight_number: <%= Faker::Number.number(3) %>
+  price: <%= Faker::Number.decimal(2) %>
+  arrival_date: <%= Faker::Time.between(3.days.from_now, 7.days.from_now) %>
+  departure_date: <%= Faker::Time.between(DateTime.now, 2.days.from_now) %>
