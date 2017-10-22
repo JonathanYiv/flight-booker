@@ -10,7 +10,7 @@
 		</div>
 		<div class="col s4">
 			<%= f.label :departure_date, "Date of Departure" %>
-			<!-- Available Dates -->
+			<%= f.select :departure_date, @date_options, {}, class: "browser-default" %>
 		</div>
 		<div class="col s2">
 			<%= f.label :passengers, "Number of Passengers" %>

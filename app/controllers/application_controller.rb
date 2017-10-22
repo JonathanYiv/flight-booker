@@ -13,5 +13,7 @@ class ApplicationController < ActionController::Base
       end
 
       @airport_options = Airport.all.to_a.unshift(Airport.new(id: 0, name: "Choose your option"))
+
+      @date_options = Flight.pluck(:departure_date).map { |date| date.strftime("%D") }.uniq.unshift(["Choose your option", 0, disabled: true, selected: true])
     end
 end

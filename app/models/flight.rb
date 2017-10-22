@@ -1,4 +1,6 @@
 class Flight < ApplicationRecord
+  default_scope { order(:departure_date) }
+
   has_many :bookings
   has_many :passengers, through: :bookings
 
@@ -9,4 +11,12 @@ class Flight < ApplicationRecord
   validates :price, presence: true
   validates :arrival_date, presence: true
   validates :departure_date, presence: true
+
+  def departure_date_formatted
+    departure_date.strftime("%D")
+  end
+
+  def departure_year_date
+    departure_date.yday
+  end
 end
