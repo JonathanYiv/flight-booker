@@ -14,7 +14,7 @@
 		</div>
 		<div class="col s2">
 			<%= f.label :passengers, "Number of Passengers" %>
-			<!-- Available Dates -->
+			<%= select_tag :passengers, options_for_select(@passenger_options), class: "browser-default" %>
 		</div>
 	</div>
 	<%= button_tag(class: "waves-effect waves-light btn-large") do %>
@@ -22,31 +22,3 @@
 		<i class="material-icons right">flight_takeoff</i>
 	<% end %>
 <% end %>
-
-<hr> 
-
-Demo Zone
-<%= form_for(@flight, url: search_path) do |f| %>
-	<div class="row">
-		<div class="col s6">
-		  	<label>Departure Airport</label>
-		  	<select class="browser-default">
-		    	<option value="" disabled selected>Choose your option</option>
-		    	<option value="1">Option 1</option>
-		    	<option value="2">Option 2</option>
-		    	<option value="3">Option 3</option>
-		  	</select>
-	  	</div>
-	  	<div class="col s6">
-		  	<label>Arrival Airport</label>
-		  	<select class="browser-default">
-		    	<option value="" disabled selected>Choose your option</option>
-		    	<option value="1">Option 1</option>
-		    	<option value="2">Option 2</option>
-		    	<option value="3">Option 3</option>
-		  	</select>
-	  	</div>
-  	</div>
-<% end %>
-
-<hr>

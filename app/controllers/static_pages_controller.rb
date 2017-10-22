@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  before_action :new_flight, only: :home
+  before_action :form_data, only: :home
 
   def home
   end
