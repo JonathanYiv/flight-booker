@@ -11,5 +11,7 @@ class ApplicationController < ActionController::Base
       (2..20).each do |num|
         @passenger_options << ["#{num} Passengers", num]
       end
+
+      @airport_options = Airport.all.to_a.unshift(Airport.new(id: 0, name: "Choose your option"))
     end
 end

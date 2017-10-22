@@ -2,11 +2,11 @@
 	<div class="row">
 		<div class="col s3">
 			<%= f.label :departure_airport, "Origin" %>
-			<!-- Selection List of Airports -->
+			<%= f.collection_select :departure_airport, @airport_options, :id, :name, {disabled: [0], selected: [0]}, class: "browser-default" %>
 		</div>
 		<div class="col s3">
 			<%= f.label :arrival_airport, "Destination" %>
-			<!-- Selection List of Airports -->
+			<%= f.collection_select :arrival_airport, @airport_options, :id, :name, {disabled: [0], selected: [0]}, class: "browser-default" %>
 		</div>
 		<div class="col s4">
 			<%= f.label :departure_date, "Date of Departure" %>
