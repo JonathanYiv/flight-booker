@@ -1,0 +1,24 @@
+<%= form_for(@flight, url: search_path) do |f| %>
+	<%= f.label :departure_airport %>
+
+	<div class="row">
+		<div class="col s6">
+		  	<label>Departure Airport</label>
+		  	<select class="browser-default">
+		    	<option value="" disabled selected>Choose your option</option>
+		    	<option value="1">Option 1</option>
+		    	<option value="2">Option 2</option>
+		    	<option value="3">Option 3</option>
+		  	</select>
+	  	</div>
+	  	<div class="col s6">
+		  	<label>Arrival Airport</label>
+		  	<select class="browser-default">
+		    	<option value="" disabled selected>Choose your option</option>
+		    	<option value="1">Option 1</option>
+		    	<option value="2">Option 2</option>
+		    	<option value="3">Option 3</option>
+		  	</select>
+	  	</div>
+  	</div>
+<% end %>
