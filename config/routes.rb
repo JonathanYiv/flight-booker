@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   get '/about', to: 'static_pages#about'
   get '/search', to: 'flights#search'
+  post '/search', to: 'flights#search'
 end

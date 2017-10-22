@@ -1,6 +1,32 @@
 <%= form_for(@flight, url: search_path) do |f| %>
-	<%= f.label :departure_airport %>
+	<div class="row">
+		<div class="col s3">
+			<%= f.label :departure_airport, "Origin" %>
+			<!-- Selection List of Airports -->
+		</div>
+		<div class="col s3">
+			<%= f.label :arrival_airport, "Destination" %>
+			<!-- Selection List of Airports -->
+		</div>
+		<div class="col s4">
+			<%= f.label :departure_date, "Date of Departure" %>
+			<!-- Available Dates -->
+		</div>
+		<div class="col s2">
+			<%= f.label :passengers, "Number of Passengers" %>
+			<!-- Available Dates -->
+		</div>
+	</div>
+	<%= button_tag(class: "waves-effect waves-light btn-large") do %>
+		Search
+		<i class="material-icons right">flight_takeoff</i>
+	<% end %>
+<% end %>
 
+<hr> 
+
+Demo Zone
+<%= form_for(@flight, url: search_path) do |f| %>
 	<div class="row">
 		<div class="col s6">
 		  	<label>Departure Airport</label>
@@ -22,3 +48,5 @@
 	  	</div>
   	</div>
 <% end %>
+
+<hr>
