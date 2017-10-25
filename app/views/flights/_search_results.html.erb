@@ -1,6 +1,7 @@
-<%= form_tag(book_path, method: :get) do %>
-	<table class="responsive-table centered striped bordered">
-		<% if @flights %>
+<% if @flights %>
+	<%= form_tag(book_path, method: :get) do %>
+		<%= hidden_field_tag :passengers, @passengers %>
+		<table class="responsive-table centered striped bordered">		
 			<thead>
 				<tr>
 					<th>Selection</th>
@@ -49,13 +50,13 @@
 					</tr>
 				<% end %>
 			</tbody>
+		</table>
+		<br>
+		<%= button_tag(name: "", class: "waves-effect waves-light btn-large") do %>
+			Book
+			<i class="material-icons right">send</i>
 		<% end %>
-	</table>
-	<br>
-	<%= button_tag(name: "", class: "waves-effect waves-light btn-large") do %>
-		Book
-		<i class="material-icons right">send</i>
 	<% end %>
+<% else %>
+<h3>There are no matching flights.</h3>
 <% end %>
-
-
