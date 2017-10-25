@@ -16,7 +16,15 @@ class Flight < ApplicationRecord
     departure_date.strftime("%D")
   end
 
-  def departure_year_date
-    departure_date.yday
+  def arrival_date_formatted
+    arrival_date.strftime("%D")
+  end
+
+  def arrival_time_formatted
+    arrival_date.strftime("%l:%M")
+  end
+
+  def departure_time_formatted
+    departure_date.strftime("%l:%M")
   end
 end

@@ -17,7 +17,7 @@
 			<%= select_tag :passengers, options_for_select(@passenger_options), class: "browser-default" %>
 		</div>
 	</div>
-	<%= button_tag(class: "waves-effect waves-light btn-large") do %>
+	<%= button_tag(name: "", class: "waves-effect waves-light btn-large") do %>
 		Search
 		<i class="material-icons right">flight_takeoff</i>
 	<% end %>

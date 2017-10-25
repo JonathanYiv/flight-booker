@@ -1,0 +1,61 @@
+<%= form_tag(book_path, method: :get) do %>
+	<table class="responsive-table centered striped bordered">
+		<% if @flights %>
+			<thead>
+				<tr>
+					<th>Selection</th>
+					<th>Origin</th>
+					<th>Destination</th>
+					<th>Flight Number</th>
+					<th>Departure Time</th>
+					<th>Departure Date</th>
+					<th>Arrival Time</th>
+					<th>Arrival Date</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% @flights.each do |flight| %>
+					<tr>
+						<td>
+							<%= radio_button_tag :flight, flight.id %>
+							<%= label :flight, flight.id %>
+						</td>				
+						<td>
+							<%= flight.departure_airport.abbreviation %>
+						</td>
+						<td>
+							<%= flight.arrival_airport.abbreviation %>
+						</td>
+						<td>
+							<%= flight.flight_number %>
+						</td>
+						<td>
+							<%= flight.departure_time_formatted %>
+						</td>
+						<td>
+							<%= flight.departure_date_formatted %>
+						</td>
+						<td>
+							<%= flight.arrival_time_formatted %>
+						</td>
+						<td>
+							<%= flight.arrival_date_formatted %>
+						</td>
+						<td>
+							$<%= flight.price %>
+						</td>
+					</tr>
+				<% end %>
+			</tbody>
+		<% end %>
+	</table>
+	<br>
+	<%= button_tag(name: "", class: "waves-effect waves-light btn-large") do %>
+		Book
+		<i class="material-icons right">send</i>
+	<% end %>
+<% end %>
+
+
