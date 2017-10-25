@@ -20,7 +20,7 @@
 					<tr>
 						<td>
 							<%= radio_button_tag :flight, flight.id %>
-							<%= label :flight, flight.id %>
+							<%= label :flight, flight.id, text = '-' %>
 						</td>				
 						<td>
 							<%= flight.departure_airport.abbreviation %>
