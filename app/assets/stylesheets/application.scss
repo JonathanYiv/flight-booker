@@ -1,6 +1,8 @@
 @import "materialize";
 @import  "https://fonts.googleapis.com/icon?family=Material+Icons";
 
+/* Sticky Footer */
+
 body {
 	display: flex;
 	min-height: 100vh;
@@ -9,5 +11,17 @@ body {
 
 main {
 	flex: 1 0 auto;
+	text-align: center;
+}
+
+/* Flash */
+
+.alert {
+	padding: 3vh;
+	background-color: #fcf8e3;
+	border-color: #faf2cc;
+	color: #8a6d3b;
+	font-size: 16px;
+	font-weight: 400;
 	text-align: center;
 }
