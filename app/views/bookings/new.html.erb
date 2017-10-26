@@ -1,1 +1,29 @@
-Make your new booking here!
+<% provide(:title, "Booking") %>
+
+<h1>Booking</h1>
+
+<div class="divider"></div>
+
+<%= form_tag bookings_path do %>
+	<%= hidden_field_tag :flight, @flight.id %>
+	<%= hidden_field_tag :passengers, @passengers %>
+	<% @passengers.times do |i| %>
+		<%= fields_for "passenger#{i}", Passenger.new do |p| %>
+			<div class="row">
+				<div class="col s5">
+					<%= p.label :name %>
+					<%= p.text_field :name, placeholder: "First and Last Name" %>
+				</div>
+				<div class="col s7">
+					<%= p.label :email %>
+					<%= p.email_field :email, placeholder: "Example@example.com" %>
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+
+	<%= button_tag(name: "", class: "waves-effect waves-light btn-large") do %>
+		<span>Book</span>
+		<i class="material-icons right">send</i>
+	<% end %>
+<% end %>

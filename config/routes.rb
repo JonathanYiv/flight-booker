@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   get '/search', to: 'flights#search'
 
-  get '/book', to: 'bookings#new'
+  resources :bookings, only: [:new, :create]
 end
