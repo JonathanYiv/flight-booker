@@ -140,3 +140,21 @@ They check their email and see the relevant email.
 	However, I'm finding myself leaning towards the usage of Minitest.
 	In this [blog post by Brandon Hilkert](http://brandonhilkert.com/blog/7-reasons-why-im-sticking-with-minitest-and-fixtures-in-rails/), he mentions 7 reasons why he is sticking to minitest, and I agree with him.
 	Going forward, I think I will use Minitest/(Fixtures of Factory Girl..still experimenting here) primarily due to the performance metrics I've read about.
+
+2. Length of Completion
+
+	This took me five days. That's much longer than I usually take! I attribute that to a few things. One was attending [All Things Open](https://allthingsopen.org) the past two days, which essentially took up the whole day each day. Then was a 'weekend' day that I took a break. So that means the project actually took about two days, which is still on the longer end for me. I tried using the [Materialize](http://materializecss.com) CSS Framework this time, and while I prefer the out-of-the-box look vastly to bootstrap, it still involved some initial learning (I understand CSS Table Styling -- I think it's called -- now!) and I found out the Rails forms and Materialize form styling just **do not play well together at all.** This was very unfortunate. I definitely plan to give Materialize another try, but first I will learn [Simple Form](https://github.com/plataformatec/simple_form) and then add the [Materialize-Form](https://github.com/jamesfwz/materialize-form) gem to my Rails app.
+
+3. Modern Design
+
+	However, I certainly feel closer to producing cleaner designs that are closer to being 'modern.'
+	Obviously, there's a lot more to learn, but I've come a long way from plaintext.
+
+4. Integration Tests/N+1/Complex Search/Nested Forms
+
+	Due to the issues with Rails forms and materialize, I had trouble producing any working version of a nested form, so I gave up on that for now. I learned a lot about what **doesn't** work, but I still need to fail more to reach a point where it does work.
+	Furthermore, I did not add any integration tests to the project. I did add the model validations tests, which is more tests than I was previously adding (none). So that's progress.
+	Additionally, I feel like my code for conducting the searches and producing the records wasn't as clean or best practices as it could be. I will be experimenting with some variations to improve upon my skill.
+	Lastly, there is most definitely N+1 querying issues. I may come back to that one day and fix it.
+	I guess progress is always in small steps.
+	At least I can acknowledge my gaps of skill and work on them onwards.
