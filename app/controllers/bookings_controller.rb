@@ -11,6 +11,7 @@ class BookingsController < ApplicationController
     params[:passengers].to_i.times do |i|
       passenger = Passenger.create(name: params["passenger#{i}"][:name], email: params["passenger#{i}"][:email])
       booking = Flight.find(params[:flight]).bookings.create(passenger: passenger)
+      PassengerMailer.thank_you_email(passenger).deliver_now
     end
     flash[:success] = "You have reserved your booking!"
     redirect_to root_path
