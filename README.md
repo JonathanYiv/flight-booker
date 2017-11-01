@@ -14,7 +14,7 @@ A typical flight booking flow might be:
 
 This is a project from [The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/building-advanced-forms).
 
-Screenshot here...
+![Flight Booker](app/assets/images/screenshot.png)
 
 ## Pre-Project Thoughts
 
